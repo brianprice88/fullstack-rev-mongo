@@ -2,30 +2,16 @@
 
 import React from 'react';
 
-const TodoListEntry = () => {
-  
+const TodoListEntry = (props) => {
+  const {todo, deleteTodo, updateTodo} = props;
   return (
     <div>
       <div>
-        10
-        remove hard coded todos
-        <button type="button">Delete</button>
-        <button type="button">+</button>
-        <button type="button">-</button>
-      </div>
-      <div>
-        10
-        Make react work
-        <button type="button">Delete</button>
-        <button type="button">+</button>
-        <button type="button">-</button>
-      </div>
-      <div>
-        10
-        Why must you be this way?
-        <button type="button">Delete</button>
-        <button type="button">+</button>
-        <button type="button">-</button>
+        {todo.priority}
+        {todo.name}
+        <button type="button" onClick = {() => deleteTodo(todo._id)}>Delete</button>
+        <button type="button" onClick = {() => updateTodo(todo._id, todo.priority + 1)}>+</button>
+        <button type="button" onClick = {() => updateTodo(todo._id, todo.priority -1)}>-</button>
       </div>
     </div>
   )

@@ -1,0 +1,18 @@
+[
+    {
+        "name:": "study",
+        "priority": 10
+    },
+    {
+        "name": "sleep",
+        "priority": 3
+    },
+    {
+        "name": "eat",
+        "priority": 2
+    },
+    {
+        "name": "rave",
+        "priority": 1
+    }
+]
